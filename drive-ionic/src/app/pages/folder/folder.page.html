@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title
+      ><ion-icon style="font-size: 18px" name="folder-open-outline"></ion-icon>
+      {{folderData?.name}}</ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- refresher -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!-- refresher -->
+
+  <!-- folder details -->
+  <div *ngFor="let folder of subFolderData;let i=index">1</div>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item>
+        <ion-label>1</ion-label>
+      </ion-item>
+
+      <ion-item-options>
+        <ion-item-option>Favorite</ion-item-option>
+        <ion-item-option color="danger">Delete</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <!-- folder details ends -->
+
+  <!-- fab button -->
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="dark">
+      <ion-icon md="caret-up" ios="chevron-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="light" (click)="presentModal()">
+        <ion-icon name="folder-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="presentImageModal()">
+        <ion-icon name="image-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+  <!-- fab button -->
+</ion-content>

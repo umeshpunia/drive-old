@@ -1,0 +1,7 @@
+{
+  "name": "drive-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

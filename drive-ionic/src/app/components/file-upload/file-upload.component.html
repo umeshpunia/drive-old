@@ -1,0 +1,18 @@
+<div class="m-5">
+  <!-- folder input -->
+  <div class="mb-6">
+    <ion-item lines="full">
+      <ion-input type="file" (change)="pickFile($event)"></ion-input>
+    </ion-item>
+  </div>
+
+  <div class="text-center lg:text-left">
+    <ion-button
+      type="submit"
+      (click)="uploadFile()"
+      color="primary"
+      expand="block"
+      >Upload File</ion-button
+    >
+  </div>
+</div>

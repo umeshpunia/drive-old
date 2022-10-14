@@ -1,0 +1,17 @@
+<div class="m-5">
+  <form [formGroup]="folderForm" (ngSubmit)="create()">
+    <!-- folder input -->
+    <div class="mb-6">
+      <ion-item lines="full">
+        <ion-label position="floating">Name</ion-label>
+        <ion-input formControlName="name" type="text" required></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="text-center lg:text-left">
+      <ion-button type="submit" color="primary" expand="block"
+        >Create Folder</ion-button
+      >
+    </div>
+  </form>
+</div>
